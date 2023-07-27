@@ -1,0 +1,113 @@
+function add() {
+  let sum = 0;
+  for (let i = 0; i < arguments.length; i++) {
+    const arg = arguments[i];
+    const num = parseFloat(arg);
+    sum += isNaN(num) ? 0 : num;
+  }
+  return sum;
+}
+
+undefined
+add();
+0
+add(10);
+10
+add(10,20);
+30
+add(10,"20");
+30
+add(10,NaN);
+10
+add(10,20,30,40,50);
+150
+typeof sum;
+'undefined'
+typeof arg;
+'undefined'
+typeof add;
+'function'
+typeof i;
+'undefined'
+arg == num;
+VM507:1 Uncaught ReferenceError: arg is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM507:1
+var a =20;
+undefined
+var b = "20";
+undefined
+a==b;
+true
+a===b;
+false
+function isPrime(n){
+    if(n<=1){
+        return false;
+    }
+    if(n<=3){
+        return true;
+    }
+    for(let i=2;i*i<=n;i++){
+        if(n%i == 0){
+            console.log("composite");
+            break;
+        }
+         console.log("the number is prime");
+    }
+}
+undefined
+isPrime(2);
+true
+isPrime(4);
+VM693:10 composite
+undefined
+isPrime(8);
+VM693:10 composite
+undefined
+isPrime(3);
+true
+isPrime(13);
+VM693:13 the number is prime
+VM693:13 the number is prime
+undefined
+isPrime(23);
+VM693:13 the number is prime
+VM693:13 the number is prime
+VM693:13 the number is prime
+undefined
+isPrime(29);
+VM693:13 the number is prime
+VM693:13 the number is prime
+VM693:13 the number is prime
+VM693:13 the number is prime
+undefined
+isPrime(27);
+VM693:13 the number is prime
+VM693:10 composite
+undefined
+function isArmstrongNumber(n) {
+  const numberStr = n.toString();
+  const numDigits = numberStr.length;
+
+let sum =0;
+for(let i=0;i<numDigits;i++){
+    const digit = parseInt(numberStr[i]);
+    let digitPower =1;
+    for (let j = 0; j < numDigits; j++) {
+      digitPower *= digit;
+    }
+
+    sum += digitPower;
+  }
+   return sum === n;
+}
+undefined
+isArmstrongNumber(153);
+true
+isArmstrongNumber(9474);
+true
+isArmstrongNumber(452);
+false
+isArmstrongNumber(4387);
+false
