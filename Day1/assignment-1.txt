@@ -1,0 +1,46 @@
+Q1. Why dot use with Value Type?
+Ans- In backend dot operator makes the wrapper object of the variable(auto boxing).
+Example- 
+         var z= 38 // value
+         var z= new Number() // auto boxing
+
+Q2. What is null value and where we use it? Hint : typeof
+Ans- null represents an empty or unknown value.
+     In JavaScript, it is used for referring absence of any object value.
+
+Q3. Typeof ?
+Ans- Typeof in JavaScript is an operator used for type checking and returns the data type of the operand passed to it. 
+
+Q4. Null vs undefined
+Ans- null is a special value that represents an empty or unknown value. null is an object, null has no reference.
+     A variable that has not been assigned a value is undefined. it is declared but not assigned any value.
+
+Q5 . == vs ===
+Ans- '==' operator performs a loose equality comparison
+     It compares the content of two types by considering them as of same types.
+     it first do type conversion then compare. returns true if value is same and false if not.
+Example-
+      var a = 12;
+      let b = "12";
+      a==b;
+output-true
+
+'===' operator performs a strict equality comparison
+It first checks if the two variables has same type if yes then it checks value of the two variables and if they are same too then it returns true.
+if variables are not of same type then it returns false.
+Example-
+      var a = 12;
+      let b = "12";
+      a===b;
+output-false
+
+
+Q6. Prime Number Compute Function
+Q7. ArmStrong Number Compute Function
+Q8. add() - 0
+add(10) - 10
+add(10,20) - 30
+add(10,”20”) - 30
+add(10,”ten”) - 10
+add(10, NaN) - 10
+add(10, 20, 30 ,40, 50)- 150
