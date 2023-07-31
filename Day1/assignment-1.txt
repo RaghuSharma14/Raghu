@@ -2,7 +2,9 @@ Q1. Why dot use with Value Type?
 Ans- In backend dot operator makes the wrapper object of the variable(auto boxing).
 Example- 
          var z= 38 // value
+z. converts primitive into its equivalent reference types. primitive equivalent is WRAPPER, and for the moment after conversion it becomes an object, also mutable and it has access to property and methods. once methods calls are done it became normal.
          var z= new Number() // auto boxing
+          
 
 Q2. What is null value and where we use it? Hint : typeof
 Ans- null represents an empty or unknown value.
