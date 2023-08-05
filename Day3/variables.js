@@ -123,3 +123,55 @@ nothing();
 OUTPUT -
 g;
 1000
+
+
+/* const--  came with ES6. The const declaration declares block-scoped local variables. 
+The value of a constant can't be changed through reassignment using the assignment operator,
+but if a constant is an object, its properties can be added, updated, or removed.
+
+const assigned only once
+const are fixed
+
+It's a good practise to declare const variables in capital letters
+*/
+
+
+//EXAMPLE-- 
+const MAX = 1000;
+
+MAX++;// cannot increment the value of the const once its declared.
+// ERROR-- Uncaught TypeError: Assignment to constant variable. at <anonymous>:1:4
+
+MAX--;// cannot decrement the value of the const once its declared.
+// ERROR-- Uncaught TypeError: Assignment to constant variable. at <anonymous>:1:4
+
+MAX = 2000;// cannot reassign the value of the const.
+// ERROR-- Uncaught TypeError: Assignment to constant variable. at <anonymous>:1:5
+
+
+
+//EXAMPLE-- 
+const ARRAY = [10,20,30,40];
+ARRAY.push(100);// In const array we can push any element in the array because the refernce is same and we can alter the elements.
+5// 100 is added in the array
+ARRAY;
+(5) [10, 20, 30, 40, 100]
+
+
+ARRAY.pop(10);
+100// 100 is removed from the array
+ARRAY;
+(4) [10, 20, 30, 40]// const is shallow const only address is constant, internal values are still variables and we can change these values.
+
+ARRAY.pop(10);
+40// 40 is removed from the array
+ARRAY;
+(3) [10, 20, 30]
+
+ARRAY[0] = 233;// In const array we can still change the internal elements bcoz only address  is constant.
+233
+ARRAY;// This will not give any error, but if we will try to assign new array to ARRAY then it will give you an error because refernce is changed.
+(3) [233, 20, 30]// value is altered at 0 index.
+
+ARRAY = [20,45,75,32,64];// reassign is not possible in const.
+//ERROR--   Uncaught TypeError: Assignment to constant variable. at <anonymous>:1:7
