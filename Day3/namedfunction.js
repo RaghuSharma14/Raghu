@@ -11,15 +11,26 @@ function show(){
 }
 show();
 //OUTPUT--
-//named function
+named Function
 
 
 //EXAMPLE - function hosting
 show();// hosting of function is done whenever we declare any function, so the declaration is placed at the top and it is accessible before the declaration.
 function show(){
-   console.log("named function");
+   console.log("named Function");
 }
 //OUTPUT--
-//named function
+named Function
 
+// hosting show is attached to the window(tab)
+window.show;
+ƒ show(){
+   console.log("named Function");
+}
+
+show();
+named Function
+
+window.show();
+named Function
 
