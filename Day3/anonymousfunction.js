@@ -9,7 +9,11 @@ var fn = function(){
 
 hosting is done in anonymous function but of var variable in which function is stored.
 
- */
+We can make a function Anonymous when we make buttons, after clicking button the function which is executed is anonymous.bcoz button doesnot need the name of function.
+ 
+anonymous function can be used in events
+and if we dont want my functions to be gloabal then we can make our inner functions also global.
+*/
 
 //EXAMPLE -
 var fn = function(){
@@ -32,3 +36,56 @@ var fn2 = function(){
 }
 
 //OUTPUT- error --   Uncaught TypeError: fn2 is not a function at <anonymous>:1:1
+
+
+
+
+//Example---
+//whenever we want that our function should not be exposed we put it in a named function  and we wrap all the function in it.
+// use case of anonymous function
+function Customer(){
+    var show = function(){
+        console.log("Customer Show");
+    }
+    var add = function(){
+        console.log("Customer Add");
+    }
+    return {show,add};// objects are made
+}
+
+window.Customer;// hosting of Customer is done so it it attached to the window.
+//OUTPUT--
+ƒ Customer(){
+    var show = function(){
+        console.log("Customer Show");
+    }
+    var add = function(){
+        console.log("Customer Add");
+    }
+    return {show,add};// if we want to access add, show we need to create an object of customer.
+}
+// when we try to access inner anonymous function it cannot be called because it has function level scope
+add;// it will through an error---- Uncaught ReferenceError: add is not defined at <anonymous>:1:1
+ 
+
+var obj = Customer// try to access add show through object of customer obj
+
+typeof obj;
+'object'
+
+obj;
+{show: ƒ, add: ƒ}
+add: ƒ ()
+show: ƒ ()
+[[Prototype]]: Object
+
+
+// accessing inner anonymous function through object
+obj.add();
+Customer Add
+
+obj.show();
+Customer Show
+
+// We can also declare anonymous function in the return
+
