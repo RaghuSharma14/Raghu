@@ -100,7 +100,7 @@ function output(){
 output();
 
 // OUTPUT- It will through an error
-Uncaught ReferenceError: Cannot access 'i' before initialization at output (<anonymous>:2:17)at <anonymous>:1:1 output @ VM977:2 (anonymous) @ VM1002:1
+///Uncaught ReferenceError: Cannot access 'i' before initialization at output (<anonymous>:2:17)at <anonymous>:1:1 output @ VM977:2 (anonymous) @ VM1002:1
 
 
 // Example ---
