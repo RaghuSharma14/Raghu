@@ -132,7 +132,7 @@ but if a constant is an object, its properties can be added, updated, or removed
 const assigned only once
 const are fixed
 
-It's a good practise to declare const variables in capital letters
+It's a good practise to declare const variables in capital letters.
 */
 
 
