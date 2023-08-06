@@ -107,3 +107,29 @@ var obj = Customer();
 obj.show;// OUTPUT-  Customer Show
 
 obj.add;// OUTPUT-  Customer Add
+
+
+
+
+// WAP to print area and perimeter of a rectangle by taking inputs from the user using prompt by ANONYMOUS FUNCTION
+
+function area_and_perimeter() {
+   
+    var area=function(x,y) {
+        return x*y;
+    }
+    var perimeter=function(x,y) {
+        return 2*(x+y);
+    }
+    var cal=function(x,y) {
+        
+        return [area,perimeter];
+    }
+    return {cal};
+}
+
+area_and_perimeter().cal()[0](2,3);
+6
+
+area_and_perimeter().cal()[1](2,3);
+10
