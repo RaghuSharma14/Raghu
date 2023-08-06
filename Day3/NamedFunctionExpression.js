@@ -71,3 +71,33 @@ t[1](10,20);
 -10
 
 
+// WAP to print area and perimeter of a rectangle by taking inputs from the user using prompt by named function expression.
+const calculateArea = function (length, width) {
+  return length * width;
+};
+
+const calculatePerimeter = function (length, width) {
+  return 2 * (length + width);
+};
+
+function getUserInput() {
+  const length = parseFloat(prompt("Enter the length of the rectangle:"));
+  const width = parseFloat(prompt("Enter the width of the rectangle:"));
+
+  if (isNaN(length) || isNaN(width)) {
+    alert("Invalid input. Please enter valid numbers for length and width.");
+    return;
+  }
+
+  const area = calculateArea(length, width);
+  const perimeter = calculatePerimeter(length, width);
+
+  //alert(`Rectangle Area: ${area}\nRectangle Perimeter: ${perimeter}`);//  it will print in the window where input is taken
+    console.log("Area of rectange is: ",area);
+    console.log("Perimeter of rectange is: ",perimeter);
+}
+getUserInput();
+
+//OUTPUT-
+Area of rectange is:  12
+Perimeter of rectange is:  14
