@@ -89,3 +89,21 @@ Customer Show
 
 // We can also declare anonymous function in the return
 
+function Customer(){
+    // var show = function(){
+    //     console.log("Customer Show");
+    // }
+    // var add = function(){
+    //     console.log("Customer Add");
+    // }
+    return {show: function(){
+                console.log("Customer Show");
+            }, add : function(){
+                   console.log("Customer Add");
+               }
+    };
+}
+var obj = Customer();
+obj.show;// OUTPUT-  Customer Show
+
+obj.add;// OUTPUT-  Customer Add
