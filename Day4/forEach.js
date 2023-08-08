@@ -1,5 +1,11 @@
 //The forEach() method executes a provided function once for each array element.
-	
+/*
+  const a = [1,2,3];
+  a.forEach((value,index,array)=>{
+     // function logic
+  });
+*/
+
 	let num = [5,8,9,6,2,1,5,3];
 	//for loop
 	for(i =0;i<num.length;i++){
